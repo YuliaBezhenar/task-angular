@@ -85,7 +85,6 @@ export class App implements OnInit{
 
   }
 
-
   async subscribeRealtime() {
     if (!this.selectedInstrument) return;
     
@@ -120,7 +119,6 @@ export class App implements OnInit{
 
   Subscribe() {
     this.loadChart();
-    //this.unsubscribeRealtime();
     this.subscribeRealtime();
   }
   
