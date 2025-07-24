@@ -1,0 +1,14 @@
+body{
+    background-color: #dce2e6;
+    font-family: "Montserrat";
+}
+
+html, body, app-root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

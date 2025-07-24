@@ -1,0 +1,61 @@
+<header>
+  <h1>Real time market data</h1>
+</header>
+
+<main class="main">
+  <div class="search-card">
+    <div class="dropdown" [class.open]="isOpen">
+      <button class="dropdown-button" (click)="toggleDropdown()">
+        {{ defaultElement }}
+        <img
+          src="angle-down-solid-full.svg"
+          alt="angle-down"
+          class="dropdown-icon"
+        />
+      </button>
+
+      <div class="dropdown-content" *ngIf="isOpen">
+        <div
+          *ngFor="let e of elements"
+          (click)="selectSort(e)"
+          class="dropdown-item"
+        >
+          {{ e }}
+        </div>
+      </div>
+    </div>
+    <button class="subscribe-button" (click)="Subscribe()">Subscribe</button>
+  </div>
+  <div class="market-data">
+    <p>Market data:</p>
+    <div class="market-data-card">
+      <label for=""> Symbol: {{ selectedInstrument?.symbol }} </label>
+      <label for=""> Price: {{ currentPrice }} </label>
+      <label for=""> Time: {{ currentTime }} </label>
+    </div>
+  </div>
+  <div class="charting-data">
+    Charting data:
+
+    <div class="charting-data-card">
+      <ngx-charts-line-chart
+        *ngIf="chartData.length"
+        [view]="view"
+        [scheme]="'vivid'"
+        [results]="chartData"
+        [gradient]="false"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        [autoScale]="true"
+      >
+      </ngx-charts-line-chart>
+    </div>
+  </div>
+</main>
+
+<router-outlet />
