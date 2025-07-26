@@ -1,10 +1,14 @@
-# Web application for receiving real time market data and historical price charts for different market assets.
+# Real-Time Market Data Web App
 
-This project was created using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
+This is a web application for receiving real-time market data and historical price charts for different market assets.
+
+This project was created using [Angular CLI](https://github.com/angular/angular-cli) v20.1.1.
 
 ## Starting an app
 
-To start the app in local server, download and run in root folder:
+To run the app locally:
+1. Clone the repository and navigate to the root folder.
+2. Run the development server with:
 
 ```bash
 ng serve
@@ -12,7 +16,8 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`.
 
-## Hosted app
+## Hosted version
 
 I hosted app on a free Firebase Hosting for a quick view. You can see it on [this link](https://angular-app-9e168.web.app/)
-However, CORS may block API requests, so I reccomend you to use [Allow CORS](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) browser extention.
+
+NOTE: However, CORS may block API requests, so I reccomend you to use [Allow CORS](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) browser extention.
